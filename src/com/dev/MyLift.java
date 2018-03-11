@@ -37,13 +37,13 @@ public class MyLift {
     private int takeInputAndValidate(String inputMsg) {
         System.out.print(inputMsg);
         int inputFloor = scan.nextInt();
-        boolean isValidInput = inputFloor >= 0 && inputFloor < TOTAL_FLOORS;
+        boolean isValidInput = inputFloor >= 0 && inputFloor <= TOTAL_FLOORS;
         if (!isValidInput) {
             while (!isValidInput) {
                 System.out.println("Invalid input, please enter again...");
                 System.out.print(inputMsg);
                 inputFloor = scan.nextInt();
-                isValidInput = inputFloor >= 0 && inputFloor < TOTAL_FLOORS;
+                isValidInput = inputFloor >= 0 && inputFloor <= TOTAL_FLOORS;
             }
         }
         return inputFloor;
